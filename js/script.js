@@ -18,7 +18,6 @@ function entry(text){
     task_checkbox.addEventListener("click", function() {
       if(task_checkbox.checked == true){
         task.classList.add("main__inactive");
-        task.setAttribute("contenteditable", "false");
       } else{
         task.classList.remove("main__inactive"); 
       }
@@ -27,5 +26,10 @@ function entry(text){
 }
 
 btn_sumb.onclick = function(){
-    entry(input_entry.value);
+    if(input_entry.value == ''){
+      alert('А где цель?(');
+    } else{
+      entry(input_entry.value);
+    }
+    input_entry.value = '';
 }
