@@ -95,5 +95,4 @@ body{
 .main__inactive{
     opacity: 0.4;
     text-decoration: line-through;
-    background-color: rgb(233, 233, 233);
 }
