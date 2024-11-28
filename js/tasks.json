@@ -1,0 +1,29 @@
+{
+    "tasks": [
+        {
+          "name": "Купить молоко",
+          "status": "In progress",
+          "priority": "high"
+        },
+        {
+          "name": "Написать эссе",
+          "status": "In progress",
+          "priority": "high"
+        },
+        {
+          "name": "Написать руководителю",
+          "status": "In progress",
+          "priority": "low"
+        },
+        {
+          "name": "Досмотреть ролик",
+          "status": "In progress",
+          "priority": "low"
+        },
+        {
+          "name": "Пройти уровень",
+          "status": "In progress",
+          "priority": "low"
+        }
+    ]
+}

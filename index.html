@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>    
+    <div class="todo__window">
+        <div class="todo__elements-block">  
+            <div class="todo__input">
+                <span>High</span>
+                <form class="addTaskForm" id="inputBlock" data-priority="high">
+                    <input id="newTaskValue" type="text" data-priority="high" placeholder="Добавить задачу">
+                    <span id="addSign">&plus;</span>
+                </form>
+            </div>
+
+            <div class="todo__list todo__high">
+                
+            </div>
+        </div>
+
+        <div class="todo__elements-block">
+            <div class="todo__input">
+                <span>Low</span>
+                <form class="addTaskForm" id="inputBlock" data-priority="low">
+                    <input id="newTaskValue" type="text" data-priority="low" placeholder="Добавить задачу">
+                    <span id="addSign">&plus;</span>
+                </form>
+            </div>
+
+            <div class="todo__list todo__low">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

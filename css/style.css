@@ -1,0 +1,84 @@
+
+.todo__window{
+    width: 500px;
+    min-height: 620px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo__elements-block{
+    width: 95%;
+    min-height: 180px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo__input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+#inputBlock{
+    width: 100%;
+    position: relative;
+}
+
+#addSign{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.todo__input input{
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.todo__list{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo__task{
+    width: 100%;
+    min-height: 40px;
+    margin-top: 10px;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+.todo__task label{
+    width: 90%;
+}
+
+.todo__task span{
+    color: gray;
+    cursor: pointer;
+}
+
+[data-status='done']{
+    background-color: rgb(175, 175, 175);
+}
