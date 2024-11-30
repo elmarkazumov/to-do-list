@@ -1,5 +1,3 @@
-import data from './tasks.json' with {type: "json"};
-
 const list = Array();
 
 function Task(task, priority){
@@ -18,6 +16,12 @@ function addTask(task, priority){
         }
     } else{
         throw new Error('Введено некорректно!');
+    }
+}
+
+function saveTaskStorage(tasks){
+    if(tasks.length){
+        localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 }
 
@@ -101,8 +105,6 @@ function showTasks(priorityList){
     const divTaskLists = document.querySelectorAll('.todo__list');
 
     if(!list.length){
-        // console.log('Список задач пуст');
-
         while(divTaskLists[0].firstChild){
             divTaskLists[0].removeChild(divTaskLists[0].firstChild);
         }
@@ -137,25 +139,18 @@ function showTasks(priorityList){
     }
 
     selectTask();
+    saveTaskStorage(list);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // for(const task of data.tasks){
-    //     list.push(task);
-    //     showTasks(task.priority);
-    // }
-
-    function d(i, arr){
-        if(i == Object.keys(data.tasks).length){
-            return;
-        } else {
-            list.push(data.tasks[i]);
-            showTasks(data.tasks[i].priority);
-            return d(i + 1, arr);
+    if(!JSON.parse(localStorage.getItem('tasks'))){
+        return;
+    } else {
+        for(const task of JSON.parse(localStorage.getItem('tasks'))){
+            list.push(task);
+            showTasks(task.priority);
         }
     }
-    
-    d(0, data.tasks);
 })
 
 const addTaskForm = document.querySelectorAll('.addTaskForm');
