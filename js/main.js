@@ -22,6 +22,8 @@ function addTask(task, priority){
 function saveTaskStorage(tasks){
     if(tasks.length){
         localStorage.setItem('tasks', JSON.stringify(tasks));
+    } else {
+        localStorage.removeItem('tasks');
     }
 }
 
@@ -58,6 +60,7 @@ function selectTask(){
             if(event.target == task.querySelector('#deleteButton')){
                 deleteSelectedTask(textTask);
                 showTasks(task.getAttribute('data-priority'));
+                console.log(list);
             }
 
             if(event.target == task.querySelector('#taskStatus')){
